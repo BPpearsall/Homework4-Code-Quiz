@@ -13,8 +13,11 @@
             <h1>
                 <a href="#highscore">Click Here to see Highscores!</a>
             </h1>
-            <h1>
-                <p id="timer">150 Seconds Remaining</p>
+                <div id="timer">
+                    <div id="timer-text"></div>
+                    <div id="timer-count">150 seconds remaining</div>
+                    
+                </div>
             </h1>
         </section>
     </header>
@@ -24,13 +27,13 @@
                 <p>Here you will be able to test your knowledge and uses of Javascript</p>
             <button id="startBtn">Start Game</button>
         </section>
-        <section id="question-screen">
+        <section id="question-screen hide">
             <h1 id="question"></h1>
                 <ul>
-                    <li id="a"></li>
-                    <li id="b"></li>
-                    <li id="c"></li>
-                    <li id="d"></li>
+                    <button id="a">a</button>
+                    <button id="b">b</button>
+                    <button id="c">c</button>
+                    <button id="d">d</button>
                 </ul>
         </section>
         <section id="highscore">

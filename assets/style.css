@@ -1,4 +1,23 @@
-section {
+header section {
     display: flex;
     justify-content: space-between;
+}
+
+#timer {
+    display:flex;
+    flex-direction: row;
+}
+
+#start-screen {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+#question-screen {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
