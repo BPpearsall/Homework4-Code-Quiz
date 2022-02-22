@@ -8,25 +8,40 @@
     <title>Code-Quiz</title>
 </head>
 <body>
+    <header>
+        <section>
+            <h1>
+                <a href="#highscore">Click Here to see Highscores!</a>
+            </h1>
+            <h1>
+                <p id="timer">150 Seconds Remaining</p>
+            </h1>
+        </section>
+    </header>
     <main class="container">
-        <div class="card" id="quizStart">
-            <h3 class="card-header" id="quiz-header"></h3>
-            <div class="card-body">
-                <p>Lets test your understanding of coding, including HTML, CSS, and Javascript</p>
-            </div>
-            <button class="start-button">Click to Start</button>
-        </div>
-        <div class="card-hide" id="question-block">
-            <div class="card-header" id="question"></div>
+        <section id="start-screen">
+            <h1>Coding Quiz Challenge</h1>
+                <p>Here you will be able to test your knowledge and uses of Javascript</p>
+            <button id="startBtn">Start Game</button>
+        </section>
+        <section id="question-screen">
+            <h1 id="question"></h1>
+                <ul>
+                    <li id="a"></li>
+                    <li id="b"></li>
+                    <li id="c"></li>
+                    <li id="d"></li>
+                </ul>
+        </section>
+        <section id="highscore">
             <ul>
-                <li id="a"></li>
-                <li id="b"></li>
-                <li id="c"></li>
-                <li id="d"></li>
+
             </ul>
-        </div>
-        <div class="card-hide" id="finished">Congrats on finishing the quiz, lets see what your highscore is!</div>
+
+        </section>
+        
     </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="/assets/script.js"></script>
 </body>
 </html>
