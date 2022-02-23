@@ -21,3 +21,14 @@ header section {
     align-items: center;
     flex-direction: column;
 }
+
+#answers{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#answers button{
+    max-width: fit-content;
+    margin: 15px;
+}

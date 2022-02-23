@@ -9,39 +9,33 @@
 </head>
 <body>
     <header>
-        <section>
+        <div>
             <h1>
-                <a href="#highscore">Click Here to see Highscores!</a>
+                <a href="/highscore.html">Highscores!</a>
             </h1>
-                <div id="timer">
-                    <div id="timer-text"></div>
-                    <div id="timer-count">150 seconds remaining</div>
-                    
+                <div id="timer">Time: <span id="time">0</span>
                 </div>
-            </h1>
-        </section>
+        </div>
     </header>
     <main class="container">
-        <section id="start-screen">
+        <div id="start-screen">
             <h1>Coding Quiz Challenge</h1>
-                <p>Here you will be able to test your knowledge and uses of Javascript</p>
+                <p>Here you will be able to test your knowledge and uses of Javascript if you answer incorrect your time </p>
             <button id="startBtn">Start Game</button>
-        </section>
-        <section id="question-screen hide">
-            <h1 id="question"></h1>
-                <ul>
-                    <button id="a">a</button>
-                    <button id="b">b</button>
-                    <button id="c">c</button>
-                    <button id="d">d</button>
-                </ul>
-        </section>
-        <section id="highscore">
+        </div>
+        <div id="question-screen" class="hide">
+            <h1 id="questionText"></h1>
+            <div id="options" class="options">
+                
+            </div>
+               
+        </div>
+        <!-- <div id="highscore">
             <ul>
 
             </ul>
 
-        </section>
+        </div> -->
         
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
