@@ -1,49 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>Code-Quiz</title>
-</head>
-<body>
-    <header>
-        <div>
-            <h1>
-                <a href="/highscore.html">Highscores!</a>
-            </h1>
-                <div id="timer">Time: <span id="time">0</span>
-                </div>
-        </div>
-    </header>
-    <main class="container">
-        <div id="start-screen">
-            <h1>Coding Quiz Challenge</h1>
-                <p>Here you will be able to test your knowledge and uses of Javascript if you answer incorrect your time </p>
-            <button id="startBtn">Start Game</button>
-        </div>
-        <div id="question-screen" class="hide">
-            <h1 id="questionText"></h1>
-            <div id="options" class="options">
-                
-            </div>
-               
-        </div>
-        <div id="highscore-section" class="hide">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/style.css" />
+        <title>Code-Quiz</title>
+    </head>
+    <body>
+        <header>
             <div>
-                <div id="high-score">
-                    <h2>All done!</h2>
-                    <h3>Your final score is <span id="final-score">0</span></h3>
-                    <label for="initials-area">Enter initials:</label>
-                    <input type="text" name="initials-area" maxlength="4" id="initials">
-                    <button id="submit-button" type="submit">Submit</button>
+                <h1>
+                    <a href="highscore.html">Highscores!</a>
+                </h1>
+                <div id="timer">Time: <span id="time">0</span></div>
+            </div>
+        </header>
+        <main class="container">
+            <div id="start-screen">
+                <h1>Coding Quiz Challenge</h1>
+                <p>
+                    Here you will be able to test your knowledge and uses of
+                    Javascript if you answer incorrect your time
+                </p>
+                <button id="startBtn">Start Game</button>
+            </div>
+            <div id="question-screen" class="hide">
+                <h1 id="questionText"></h1>
+                <div id="options" class="options"></div>
+            </div>
+            <div id="highscore-section" class="hide">
+                <div>
+                    <div id="high-score">
+                        <h2>All done!</h2>
+                        <h3>
+                            Your final score is <span id="final-score">0</span>
+                        </h3>
+                        <label for="initials-area">Enter initials:</label>
+                        <input
+                            type="text"
+                            name="initials-area"
+                            maxlength="4"
+                            id="initials"
+                        />
+                        <button id="submit-button" type="submit">Submit</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-    </main>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="./assets/script.js"></script>
-</body>
+        </main>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+        ></script>
+        <script src="./assets/JavaScript/script.js"></script>
+    </body>
 </html>
