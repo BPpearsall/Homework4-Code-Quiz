@@ -8,6 +8,7 @@
         <title>Code-Quiz</title>
     </head>
     <body>
+        <!-- Header contains the highscore href and timer information -->
         <header>
             <div>
                 <h1>
@@ -17,18 +18,21 @@
             </div>
         </header>
         <main class="container">
+            <!-- Starting screen with basic information and startgame button -->
             <div id="start-screen">
                 <h1>Coding Quiz Challenge</h1>
                 <p>
                     Here you will be able to test your knowledge and uses of
-                    Javascript if you answer incorrect your time
+                    Javascript. If you answer incorrect, time will be deducted from your final score. At the end of the game please input your initials to see the highscores!
                 </p>
                 <button id="startBtn">Start Game</button>
             </div>
+            <!-- Questions screen that calls question object in javascript -->
             <div id="question-screen" class="hide">
                 <h1 id="questionText"></h1>
                 <div id="options" class="options"></div>
             </div>
+            <!-- highscore sections that contains input fields for initials and submit button which sends to highscore.html -->
             <div id="highscore-section" class="hide">
                 <div>
                     <div id="high-score">
@@ -48,11 +52,7 @@
                 </div>
             </div>
         </main>
-        <script
-            src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-            crossorigin="anonymous"
-        ></script>
+        
         <script src="./assets/JavaScript/script.js"></script>
     </body>
 </html>

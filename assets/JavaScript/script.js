@@ -1,6 +1,8 @@
+// Set global variables for question index and timercount
 let qIndex = 0;
 let timerCount;
 
+// Set global variables from Index.html
 let startScreenEl = document.querySelector("#start-screen");
 let questionTextEl = document.querySelector("#questionText");
 let questionScreenEl = document.querySelector("#question-screen");
@@ -12,6 +14,7 @@ let highScoreSectionEl = document.querySelector("#highscore-section");
 let finalScoreEl = document.querySelector("#final-score");
 let initialEl = document.querySelector("#initials");
 
+// Object of questions where each question, options, and answer are stored
 let question = [
     {
         questionText: "What is Javascript",
@@ -40,8 +43,10 @@ let question = [
     },
 ];
 
+// Was receiving erros when this was above Question Object, so placed the global time variable below it
 let time = question.length * 20;
 
+//Start game function hides start screen, unhides the question screen and begins the countdown function while calling getQuestion function 
 function startGame() {
     startScreenEl.setAttribute("class", "hide");
     questionScreenEl.removeAttribute("class", "hide");
@@ -50,8 +55,8 @@ function startGame() {
     getQuestion();
 }
 
+// Calls the question object array and populates the questionText. For each option index, creates buttons that have each of the objects and calls correctAnswer function
 function getQuestion() {
-    // call variable that = object "question[qIndex]"
     let currentQuestion = question[qIndex];
     questionTextEl.textContent = currentQuestion.questionText;
     optionsEl.innerHTML = "";
@@ -65,6 +70,7 @@ function getQuestion() {
     });
 }
 
+// function checks if the button clicked matches the answer under the same object. If it does not equal the answer then subtracts time.
 function correctAnswer() {
     if (this.value !== question[qIndex].answer) {
         time -= 20;
@@ -76,6 +82,7 @@ function correctAnswer() {
     } else {
         alert("Right Answer");
     }
+    // When function gets called, the qIndex moves to the next array inside the questions object. 
     qIndex++;
     if (qIndex === question.length) {
         quizEnd();
@@ -84,6 +91,7 @@ function correctAnswer() {
     }
 }
 
+// Function to get called, stops the timercount interval. hides the question screen, unhides the highscore screen, and places the time remaining into finalscore
 function quizEnd() {
     clearInterval(timerCount);
     highScoreSectionEl.removeAttribute("class", "hide");
@@ -91,28 +99,35 @@ function quizEnd() {
     finalScoreEl.textContent = time;
 }
 
+// trims  whitespace off initials. checks to make sure that initials field isnt empty. if it isnt empty then it locally stores highscores
 function saveHighScore() {
     let initials = initialEl.value.trim();
     if (initials !== "") {
         let highscores =
             JSON.parse(window.localStorage.getItem("highscores")) || [];
+        // creates new object that stores the "score and initials"
         let newScore = {
           score: time,
           initials: initials
     };
 
+    // puts newScore object at the end of highscore
     highscores.push(newScore);
+    // locally stores new highscores object and turns them into strings
     window.localStorage.setItem("highscores", JSON.stringify(highscores));
+    // opens up the highscore.html
     window.location.href = "highscore.html";
 }
 }
 
+// function where when the user presses the enter key, it runs the savehighscore function
 function submitScore(event){
   if (event.key === "Enter"){
     saveHighScore();
   }
 }
 
+// function that stores the code for the timer countdown
 function countDown() {
     time--;
     timeEl.textContent = time;
@@ -121,10 +136,6 @@ function countDown() {
     }
 }
 
-function clearHighScore(){
-  window.localStorage.removeItem("highscores");
-  window.location.reload()
-}
 
 submitBtnEl.onclick = saveHighScore
 

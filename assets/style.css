@@ -22,15 +22,25 @@ header section {
     flex-direction: column;
 }
 
-#answers{
+#options{
     display:flex;
     align-items: center;
     flex-direction: column;
+}   
+
+.options{
+    background-color: blueviolet;
+    color: white;
 }
 
-#answers button{
-    max-width: fit-content;
-    margin: 15px;
+#highscore-section {
+    display: flex;
+    justify-content: center;
+}
+
+#highscore-display {
+    display:flex;
+    justify-content: center;
 }
 
 .hide {
