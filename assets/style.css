@@ -32,3 +32,7 @@ header section {
     max-width: fit-content;
     margin: 15px;
 }
+
+.hide {
+    content-visibility: hidden;
+}
